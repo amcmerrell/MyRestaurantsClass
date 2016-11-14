@@ -11,25 +11,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
-    private Button mFindRestaurantsButton;
-    private EditText mLocationEditText;
-    private Button mGoToAboutButton;
-    private TextView mAppNameTextView;
+    @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
+    @BindView(R.id.locationEditText) EditText mLocationEditText;
+    @BindView(R.id.appNameTextView) TextView mAppNameTextView;
+    @BindView(R.id.goToAboutButton) Button mGoToAboutButton;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
 
-        mAppNameTextView = (TextView) findViewById(R.id.appNameTextView);
         Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
         mAppNameTextView.setTypeface(pacificoFont);
 
-        mFindRestaurantsButton = (Button) findViewById(R.id.findRestaurantsButton);
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -40,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mGoToAboutButton = (Button) findViewById(R.id.goToAboutButton);
         mGoToAboutButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

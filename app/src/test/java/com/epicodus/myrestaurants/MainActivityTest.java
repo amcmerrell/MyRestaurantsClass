@@ -26,18 +26,18 @@ public class MainActivityTest {
         activity = Robolectric.setupActivity(MainActivity.class);
     }
 
-    @Test
-    public void validateTextViewContent() {
-        TextView appNameTextView = (TextView) activity.findViewById(R.id.appNameTextView);
-        assertTrue("MyRestaurants".equals(appNameTextView.getText().toString()));
-    }
-
-    @Test
-    public void secondActivityStarted() {
-        activity.findViewById(R.id.findRestaurantsButton).performClick();
-        Intent expectedIntent = new Intent(activity, RestaurantsActivity.class);
-        ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
-        Intent actualIntent = shadowActivity.getNextStartedActivity();
-        assertTrue(actualIntent.filterEquals(expectedIntent));
-    }
+//    @Test
+//    public void validateTextViewContent() {
+//        TextView appNameTextView = (TextView) activity.findViewById(R.id.appNameTextView);
+//        assertTrue("MyRestaurants".equals(appNameTextView.getText().toString()));
+//    }
+//
+//    @Test
+//    public void secondActivityStarted() {
+//        activity.findViewById(R.id.findRestaurantsButton).performClick();
+//        Intent expectedIntent = new Intent(activity, RestaurantsActivity.class);
+//        ShadowActivity shadowActivity = org.robolectric.Shadows.shadowOf(activity);
+//        Intent actualIntent = shadowActivity.getNextStartedActivity();
+//        assertTrue(actualIntent.filterEquals(expectedIntent));
+//    }
 }
