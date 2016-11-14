@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.epicodus.myrestaurants.AboutRestaurants">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur mattis eros, in consequat urna. Integer congue ac diam eu semper. Nullam sed volutpat orci. Vestibulum sit amet facilisis mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus ut pellentesque tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam consequat placerat aliquam. Proin bibendum dictum lacus ac cursus. Aenean erat libero, ultrices vel elementum eu, tempor nec tellus. Maecenas est magna, finibus in commodo sed, gravida non dui. Mauris at dui arcu. Phasellus vitae magna purus. Nunc ultricies odio vel suscipit tempor. Morbi aliquet tempor ultricies. Fusce interdum nunc leo, at fermentum erat finibus eget.  Aliquam lobortis pretium arcu non scelerisque. Phasellus ullamcorper urna eget mi accumsan, nec faucibus urna pretium. Sed sagittis nulla in diam consequat, ac lobortis risus bibendum. Vivamus fringilla, velit ac mollis malesuada, arcu ipsum gravida quam, sit amet dapibus eros nisl et tortor. Nullam viverra augue lacus, eget suscipit massa tincidunt sit amet. Quisque dolor velit, tempus elementum lorem sed, mollis aliquam dolor. Duis tincidunt viverra turpis, et scelerisque sapien egestas dictum."
+        android:id="@+id/textView"
+        android:textSize="12sp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="About"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="40sp" />
+</RelativeLayout>
