@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.locationEditText) EditText mLocationEditText;
     @Bind(R.id.appNameTextView) TextView mAppNameTextView;
     @Bind(R.id.goToAboutButton) Button mGoToAboutButton;
-//    private TextView mAppNameTextView;
+
 
 
     @Override
