@@ -12,14 +12,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @BindView(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
-    @BindView(R.id.locationEditText) EditText mLocationEditText;
-    @BindView(R.id.appNameTextView) TextView mAppNameTextView;
-    @BindView(R.id.goToAboutButton) Button mGoToAboutButton;
+    @Bind(R.id.findRestaurantsButton) Button mFindRestaurantsButton;
+    @Bind(R.id.locationEditText) EditText mLocationEditText;
+    @Bind(R.id.appNameTextView) TextView mAppNameTextView;
+    @Bind(R.id.goToAboutButton) Button mGoToAboutButton;
+//    private TextView mAppNameTextView;
 
 
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         Typeface pacificoFont = Typeface.createFromAsset(getAssets(), "fonts/Pacifico.ttf");
         mAppNameTextView.setTypeface(pacificoFont);
+        Log.e("MainActivity", "In the setTypeface");
 
         mFindRestaurantsButton.setOnClickListener(new View.OnClickListener(){
             @Override

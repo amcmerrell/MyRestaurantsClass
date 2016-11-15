@@ -3,6 +3,7 @@ package com.epicodus.myrestaurants;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,6 +30,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
         mLocationTextView.setText("Here are all the restaurants near: " + location);
+        Log.d("RestaurantsActivity", "In the onCreate method!");
 
         mListView = (ListView) findViewById(R.id.listView);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, restaurants);
@@ -39,6 +41,7 @@ public class RestaurantsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String restaurant = ((TextView)view).getText().toString();
                 Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_LONG).show();
+                Log.v("RestaurantsActivity", "In the onItemClickListener!");
             }
         });
     }
